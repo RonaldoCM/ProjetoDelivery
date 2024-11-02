@@ -1,0 +1,14 @@
+G:\MYFILES\Documents\ProjetoDelivery\Model\bin\Debug\net8.0-windows\Model.deps.json
+G:\MYFILES\Documents\ProjetoDelivery\Model\bin\Debug\net8.0-windows\Model.dll
+G:\MYFILES\Documents\ProjetoDelivery\Model\bin\Debug\net8.0-windows\Model.pdb
+G:\MYFILES\Documents\ProjetoDelivery\App\Debug\net8.0-windows\Model.deps.json
+G:\MYFILES\Documents\ProjetoDelivery\App\Debug\net8.0-windows\Model.dll
+G:\MYFILES\Documents\ProjetoDelivery\App\Debug\net8.0-windows\Model.pdb
+G:\MYFILES\Documents\ProjetoDelivery\Model\obj\Debug\net8.0-windows\Model.GeneratedMSBuildEditorConfig.editorconfig
+G:\MYFILES\Documents\ProjetoDelivery\Model\obj\Debug\net8.0-windows\Model.AssemblyInfoInputs.cache
+G:\MYFILES\Documents\ProjetoDelivery\Model\obj\Debug\net8.0-windows\Model.AssemblyInfo.cs
+G:\MYFILES\Documents\ProjetoDelivery\Model\obj\Debug\net8.0-windows\Model.csproj.CoreCompileInputs.cache
+G:\MYFILES\Documents\ProjetoDelivery\Model\obj\Debug\net8.0-windows\Model.dll
+G:\MYFILES\Documents\ProjetoDelivery\Model\obj\Debug\net8.0-windows\refint\Model.dll
+G:\MYFILES\Documents\ProjetoDelivery\Model\obj\Debug\net8.0-windows\Model.pdb
+G:\MYFILES\Documents\ProjetoDelivery\Model\obj\Debug\net8.0-windows\ref\Model.dll

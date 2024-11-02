@@ -1,0 +1,5 @@
+G:\MYFILES\Documents\ProjetoDelivery\DataAccess\obj\Release\net6.0-windows10.0.17763.0\DataAccess.csproj.AssemblyReference.cache
+G:\MYFILES\Documents\ProjetoDelivery\DataAccess\obj\Release\net6.0-windows10.0.17763.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+G:\MYFILES\Documents\ProjetoDelivery\DataAccess\obj\Release\net6.0-windows10.0.17763.0\DataAccess.AssemblyInfoInputs.cache
+G:\MYFILES\Documents\ProjetoDelivery\DataAccess\obj\Release\net6.0-windows10.0.17763.0\DataAccess.AssemblyInfo.cs
+G:\MYFILES\Documents\ProjetoDelivery\DataAccess\obj\Release\net6.0-windows10.0.17763.0\DataAccess.csproj.CoreCompileInputs.cache

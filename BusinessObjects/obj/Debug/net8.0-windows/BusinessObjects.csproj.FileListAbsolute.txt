@@ -1,0 +1,13 @@
+G:\MYFILES\Documents\ProjetoDelivery\App\Debug\net8.0-windows\BusinessObjects.deps.json
+G:\MYFILES\Documents\ProjetoDelivery\App\Debug\net8.0-windows\BusinessObjects.dll
+G:\MYFILES\Documents\ProjetoDelivery\App\Debug\net8.0-windows\BusinessObjects.pdb
+G:\MYFILES\Documents\ProjetoDelivery\BusinessObjects\obj\Debug\net8.0-windows\BusinessObjects.csproj.AssemblyReference.cache
+G:\MYFILES\Documents\ProjetoDelivery\BusinessObjects\obj\Debug\net8.0-windows\BusinessObjects.GeneratedMSBuildEditorConfig.editorconfig
+G:\MYFILES\Documents\ProjetoDelivery\BusinessObjects\obj\Debug\net8.0-windows\BusinessObjects.AssemblyInfoInputs.cache
+G:\MYFILES\Documents\ProjetoDelivery\BusinessObjects\obj\Debug\net8.0-windows\BusinessObjects.AssemblyInfo.cs
+G:\MYFILES\Documents\ProjetoDelivery\BusinessObjects\obj\Debug\net8.0-windows\BusinessObjects.csproj.CoreCompileInputs.cache
+G:\MYFILES\Documents\ProjetoDelivery\BusinessObjects\obj\Debug\net8.0-windows\Business.9F57EB23.Up2Date
+G:\MYFILES\Documents\ProjetoDelivery\BusinessObjects\obj\Debug\net8.0-windows\BusinessObjects.dll
+G:\MYFILES\Documents\ProjetoDelivery\BusinessObjects\obj\Debug\net8.0-windows\refint\BusinessObjects.dll
+G:\MYFILES\Documents\ProjetoDelivery\BusinessObjects\obj\Debug\net8.0-windows\BusinessObjects.pdb
+G:\MYFILES\Documents\ProjetoDelivery\BusinessObjects\obj\Debug\net8.0-windows\ref\BusinessObjects.dll

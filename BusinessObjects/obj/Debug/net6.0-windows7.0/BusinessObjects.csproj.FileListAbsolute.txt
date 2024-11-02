@@ -1,0 +1,5 @@
+G:\MYFILES\Documents\ProjetoDelivery\BusinessObjects\obj\Debug\net6.0-windows7.0\BusinessObjects.csproj.AssemblyReference.cache
+G:\MYFILES\Documents\ProjetoDelivery\BusinessObjects\obj\Debug\net6.0-windows7.0\BusinessObjects.GeneratedMSBuildEditorConfig.editorconfig
+G:\MYFILES\Documents\ProjetoDelivery\BusinessObjects\obj\Debug\net6.0-windows7.0\BusinessObjects.AssemblyInfoInputs.cache
+G:\MYFILES\Documents\ProjetoDelivery\BusinessObjects\obj\Debug\net6.0-windows7.0\BusinessObjects.AssemblyInfo.cs
+G:\MYFILES\Documents\ProjetoDelivery\BusinessObjects\obj\Debug\net6.0-windows7.0\BusinessObjects.csproj.CoreCompileInputs.cache

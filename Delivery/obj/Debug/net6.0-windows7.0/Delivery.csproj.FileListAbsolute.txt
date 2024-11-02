@@ -1,0 +1,8 @@
+G:\MYFILES\Documents\ProjetoDelivery\Delivery\obj\Debug\net6.0-windows7.0\Delivery.csproj.AssemblyReference.cache
+G:\MYFILES\Documents\ProjetoDelivery\Delivery\obj\Debug\net6.0-windows7.0\Delivery.Formularios.LogInView.resources
+G:\MYFILES\Documents\ProjetoDelivery\Delivery\obj\Debug\net6.0-windows7.0\Delivery.Formularios.PessoaView.resources
+G:\MYFILES\Documents\ProjetoDelivery\Delivery\obj\Debug\net6.0-windows7.0\Delivery.csproj.GenerateResource.cache
+G:\MYFILES\Documents\ProjetoDelivery\Delivery\obj\Debug\net6.0-windows7.0\Delivery.GeneratedMSBuildEditorConfig.editorconfig
+G:\MYFILES\Documents\ProjetoDelivery\Delivery\obj\Debug\net6.0-windows7.0\Delivery.AssemblyInfoInputs.cache
+G:\MYFILES\Documents\ProjetoDelivery\Delivery\obj\Debug\net6.0-windows7.0\Delivery.AssemblyInfo.cs
+G:\MYFILES\Documents\ProjetoDelivery\Delivery\obj\Debug\net6.0-windows7.0\Delivery.csproj.CoreCompileInputs.cache

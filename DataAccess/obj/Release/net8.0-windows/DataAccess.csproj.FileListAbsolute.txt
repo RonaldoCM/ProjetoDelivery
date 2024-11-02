@@ -1,0 +1,13 @@
+G:\MYFILES\Documents\ProjetoDelivery\DataAccess\obj\Release\net8.0-windows\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+G:\MYFILES\Documents\ProjetoDelivery\DataAccess\obj\Release\net8.0-windows\DataAccess.AssemblyInfoInputs.cache
+G:\MYFILES\Documents\ProjetoDelivery\DataAccess\obj\Release\net8.0-windows\DataAccess.AssemblyInfo.cs
+G:\MYFILES\Documents\ProjetoDelivery\DataAccess\obj\Release\net8.0-windows\DataAccess.csproj.CoreCompileInputs.cache
+G:\MYFILES\Documents\ProjetoDelivery\App\Release\net8.0-windows\DataAccess.deps.json
+G:\MYFILES\Documents\ProjetoDelivery\App\Release\net8.0-windows\DataAccess.dll
+G:\MYFILES\Documents\ProjetoDelivery\App\Release\net8.0-windows\DataAccess.pdb
+G:\MYFILES\Documents\ProjetoDelivery\DataAccess\obj\Release\net8.0-windows\DataAccess.dll
+G:\MYFILES\Documents\ProjetoDelivery\DataAccess\obj\Release\net8.0-windows\refint\DataAccess.dll
+G:\MYFILES\Documents\ProjetoDelivery\DataAccess\obj\Release\net8.0-windows\DataAccess.pdb
+G:\MYFILES\Documents\ProjetoDelivery\DataAccess\obj\Release\net8.0-windows\ref\DataAccess.dll
+G:\MYFILES\Documents\ProjetoDelivery\DataAccess\obj\Release\net8.0-windows\DataAccess.csproj.AssemblyReference.cache
+G:\MYFILES\Documents\ProjetoDelivery\DataAccess\obj\Release\net8.0-windows\DataAccess.csproj.Up2Date
