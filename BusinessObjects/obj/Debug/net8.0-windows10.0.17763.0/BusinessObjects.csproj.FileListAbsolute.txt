@@ -11,3 +11,4 @@ G:\MYFILES\Documents\ProjetoDelivery\BusinessObjects\obj\Debug\net8.0-windows10.
 G:\MYFILES\Documents\ProjetoDelivery\BusinessObjects\obj\Debug\net8.0-windows10.0.17763.0\refint\BusinessObjects.dll
 G:\MYFILES\Documents\ProjetoDelivery\BusinessObjects\obj\Debug\net8.0-windows10.0.17763.0\BusinessObjects.pdb
 G:\MYFILES\Documents\ProjetoDelivery\BusinessObjects\obj\Debug\net8.0-windows10.0.17763.0\ref\BusinessObjects.dll
+G:\MYFILES\Documents\ProjetoDelivery\BusinessObjects\obj\Debug\net8.0-windows10.0.17763.0\BusinessObjects.sourcelink.json

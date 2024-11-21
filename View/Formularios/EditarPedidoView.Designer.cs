@@ -46,27 +46,27 @@
             txtBairroCliente = new TextBox();
             cmbProduto = new ComboBox();
             pnlItensEdicaoPedido = new Panel();
-            toolStrip1 = new ToolStrip();
+            toolStripMenuGrid = new ToolStrip();
             tstplabelTotalPedido = new ToolStripLabel();
             tlsCifra = new ToolStripLabel();
             tlsValorTotalPedido = new ToolStripLabel();
             dgItensEdicaoPedido = new DataGridView();
-            ID = new DataGridViewTextBoxColumn();
-            COLREMOVERITEM = new DataGridViewButtonColumn();
-            COLNOMEPRODUTO = new DataGridViewTextBoxColumn();
-            COLPRECOPRODUTO = new DataGridViewTextBoxColumn();
-            COLQUANTIDADEITEMPEDIDO = new DataGridViewTextBoxColumn();
-            COLDESCRICAOPRODUTO = new DataGridViewTextBoxColumn();
             lblNumeroCasaCliente = new Label();
             lblEnderecoCliente = new Label();
             lblNomeCliente = new Label();
             txtNumeroCasaCliente = new TextBox();
             txtEnderecoCliente = new TextBox();
             txtNomeCliente = new TextBox();
+            ID = new DataGridViewTextBoxColumn();
+            COLREMOVERITEM = new DataGridViewButtonColumn();
+            COLNOMEPRODUTO = new DataGridViewTextBoxColumn();
+            COLPRECOPRODUTO = new DataGridViewTextBoxColumn();
+            COLQUANTIDADEITEMPEDIDO = new DataGridViewTextBoxColumn();
+            COLDESCRICAOPRODUTO = new DataGridViewTextBoxColumn();
             pnlEditarPedidos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numUpDwnQuantidadeItem).BeginInit();
             pnlItensEdicaoPedido.SuspendLayout();
-            toolStrip1.SuspendLayout();
+            toolStripMenuGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgItensEdicaoPedido).BeginInit();
             SuspendLayout();
             // 
@@ -209,21 +209,21 @@
             // 
             // pnlItensEdicaoPedido
             // 
-            pnlItensEdicaoPedido.Controls.Add(toolStrip1);
+            pnlItensEdicaoPedido.Controls.Add(toolStripMenuGrid);
             pnlItensEdicaoPedido.Controls.Add(dgItensEdicaoPedido);
             pnlItensEdicaoPedido.Location = new Point(12, 252);
             pnlItensEdicaoPedido.Name = "pnlItensEdicaoPedido";
             pnlItensEdicaoPedido.Size = new Size(539, 207);
             pnlItensEdicaoPedido.TabIndex = 8;
             // 
-            // toolStrip1
+            // toolStripMenuGrid
             // 
-            toolStrip1.Items.AddRange(new ToolStripItem[] { tstplabelTotalPedido, tlsCifra, tlsValorTotalPedido });
-            toolStrip1.Location = new Point(0, 0);
-            toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(539, 25);
-            toolStrip1.TabIndex = 1;
-            toolStrip1.Text = "toolStrip1";
+            toolStripMenuGrid.Items.AddRange(new ToolStripItem[] { tstplabelTotalPedido, tlsCifra, tlsValorTotalPedido });
+            toolStripMenuGrid.Location = new Point(0, 0);
+            toolStripMenuGrid.Name = "toolStripMenuGrid";
+            toolStripMenuGrid.Size = new Size(539, 25);
+            toolStripMenuGrid.TabIndex = 1;
+            toolStripMenuGrid.Text = "toolStripMenuGrid";
             // 
             // tstplabelTotalPedido
             // 
@@ -276,56 +276,6 @@
             dgItensEdicaoPedido.Size = new Size(539, 179);
             dgItensEdicaoPedido.TabIndex = 9;
             // 
-            // ID
-            // 
-            ID.Frozen = true;
-            ID.HeaderText = "ID Produto";
-            ID.Name = "ID";
-            ID.Visible = false;
-            // 
-            // COLREMOVERITEM
-            // 
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            COLREMOVERITEM.DefaultCellStyle = dataGridViewCellStyle1;
-            COLREMOVERITEM.Frozen = true;
-            COLREMOVERITEM.HeaderText = "";
-            COLREMOVERITEM.Name = "COLREMOVERITEM";
-            COLREMOVERITEM.Resizable = DataGridViewTriState.False;
-            COLREMOVERITEM.Text = "Remover";
-            COLREMOVERITEM.ToolTipText = "Remover Item";
-            COLREMOVERITEM.Width = 60;
-            // 
-            // COLNOMEPRODUTO
-            // 
-            COLNOMEPRODUTO.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            COLNOMEPRODUTO.Frozen = true;
-            COLNOMEPRODUTO.HeaderText = "Nome Produto";
-            COLNOMEPRODUTO.Name = "COLNOMEPRODUTO";
-            COLNOMEPRODUTO.Width = 111;
-            // 
-            // COLPRECOPRODUTO
-            // 
-            COLPRECOPRODUTO.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            COLPRECOPRODUTO.Frozen = true;
-            COLPRECOPRODUTO.HeaderText = "Preço";
-            COLPRECOPRODUTO.Name = "COLPRECOPRODUTO";
-            COLPRECOPRODUTO.Width = 62;
-            // 
-            // COLQUANTIDADEITEMPEDIDO
-            // 
-            COLQUANTIDADEITEMPEDIDO.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            COLQUANTIDADEITEMPEDIDO.Frozen = true;
-            COLQUANTIDADEITEMPEDIDO.HeaderText = "Quantidade";
-            COLQUANTIDADEITEMPEDIDO.Name = "COLQUANTIDADEITEMPEDIDO";
-            COLQUANTIDADEITEMPEDIDO.Width = 94;
-            // 
-            // COLDESCRICAOPRODUTO
-            // 
-            COLDESCRICAOPRODUTO.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            COLDESCRICAOPRODUTO.HeaderText = "Descrição";
-            COLDESCRICAOPRODUTO.Name = "COLDESCRICAOPRODUTO";
-            // 
             // lblNumeroCasaCliente
             // 
             lblNumeroCasaCliente.AutoSize = true;
@@ -374,6 +324,61 @@
             txtNomeCliente.Size = new Size(201, 23);
             txtNomeCliente.TabIndex = 2;
             // 
+            // ID
+            // 
+            ID.DataPropertyName = "IDPRODUTO";
+            ID.Frozen = true;
+            ID.HeaderText = "ID Produto";
+            ID.Name = "ID";
+            ID.Visible = false;
+            // 
+            // COLREMOVERITEM
+            // 
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            COLREMOVERITEM.DefaultCellStyle = dataGridViewCellStyle1;
+            COLREMOVERITEM.Frozen = true;
+            COLREMOVERITEM.HeaderText = "";
+            COLREMOVERITEM.Name = "COLREMOVERITEM";
+            COLREMOVERITEM.Resizable = DataGridViewTriState.False;
+            COLREMOVERITEM.Text = "Remover";
+            COLREMOVERITEM.ToolTipText = "Remover Item";
+            COLREMOVERITEM.Width = 60;
+            // 
+            // COLNOMEPRODUTO
+            // 
+            COLNOMEPRODUTO.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            COLNOMEPRODUTO.DataPropertyName = "NOMEPRODUTO";
+            COLNOMEPRODUTO.Frozen = true;
+            COLNOMEPRODUTO.HeaderText = "Nome Produto";
+            COLNOMEPRODUTO.Name = "COLNOMEPRODUTO";
+            COLNOMEPRODUTO.Width = 111;
+            // 
+            // COLPRECOPRODUTO
+            // 
+            COLPRECOPRODUTO.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            COLPRECOPRODUTO.DataPropertyName = "PRECOPRODUTO";
+            COLPRECOPRODUTO.Frozen = true;
+            COLPRECOPRODUTO.HeaderText = "Preço";
+            COLPRECOPRODUTO.Name = "COLPRECOPRODUTO";
+            COLPRECOPRODUTO.Width = 62;
+            // 
+            // COLQUANTIDADEITEMPEDIDO
+            // 
+            COLQUANTIDADEITEMPEDIDO.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            COLQUANTIDADEITEMPEDIDO.DataPropertyName = "QUANTIDADEITEMPEDIDO";
+            COLQUANTIDADEITEMPEDIDO.Frozen = true;
+            COLQUANTIDADEITEMPEDIDO.HeaderText = "Quantidade";
+            COLQUANTIDADEITEMPEDIDO.Name = "COLQUANTIDADEITEMPEDIDO";
+            COLQUANTIDADEITEMPEDIDO.Width = 94;
+            // 
+            // COLDESCRICAOPRODUTO
+            // 
+            COLDESCRICAOPRODUTO.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            COLDESCRICAOPRODUTO.DataPropertyName = "DESCRICAOPRODUTO";
+            COLDESCRICAOPRODUTO.HeaderText = "Descrição";
+            COLDESCRICAOPRODUTO.Name = "COLDESCRICAOPRODUTO";
+            // 
             // EditarPedidoView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -389,8 +394,8 @@
             ((System.ComponentModel.ISupportInitialize)numUpDwnQuantidadeItem).EndInit();
             pnlItensEdicaoPedido.ResumeLayout(false);
             pnlItensEdicaoPedido.PerformLayout();
-            toolStrip1.ResumeLayout(false);
-            toolStrip1.PerformLayout();
+            toolStripMenuGrid.ResumeLayout(false);
+            toolStripMenuGrid.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgItensEdicaoPedido).EndInit();
             ResumeLayout(false);
         }
@@ -405,7 +410,7 @@
         private Label lblBairroCliente;
         private Label lblProduto;
         public Button btnAdicionarItem;
-        private ToolStrip toolStrip1;
+        private ToolStrip toolStripMenuGrid;
         private ToolStripLabel tstplabelTotalPedido;
         private ToolStripLabel tlsCifra;
         public Button btnCancelarEdicaoPedido;

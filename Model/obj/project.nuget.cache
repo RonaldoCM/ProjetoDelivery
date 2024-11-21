@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "IVxvbi3J+cU=",
+  "dgSpecHash": "wQS6Cn2W5Qs=",
   "success": true,
   "projectFilePath": "G:\\MYFILES\\Documents\\ProjetoDelivery\\Model\\Model.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\ronaldo.costa\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.17763.44\\microsoft.windows.sdk.net.ref.10.0.17763.44.nupkg.sha512"
+  ],
   "logs": []
 }

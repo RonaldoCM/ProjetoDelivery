@@ -12,7 +12,7 @@ namespace BusinessObjects
             _pessoaDA = new PessoaDA(); 
         }
 
-        public bool AdicionarPessoa(Pessoa p)
+        public int AdicionarPessoa(Pessoa p)
         {
             if (string.IsNullOrWhiteSpace(p.Nome))
             {

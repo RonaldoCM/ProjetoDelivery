@@ -29,3 +29,9 @@ G:\MYFILES\Documents\ProjetoDelivery\View\obj\Debug\net8.0-windows\View.Formular
 G:\MYFILES\Documents\ProjetoDelivery\View\obj\Debug\net8.0-windows\View.Formularios.GerenciadorDePedidosView.resources
 G:\MYFILES\Documents\ProjetoDelivery\View\obj\Debug\net8.0-windows\View.Formularios.MenuView.resources
 G:\MYFILES\Documents\ProjetoDelivery\View\obj\Debug\net8.0-windows\View.Formularios.FreteView.resources
+G:\MYFILES\Documents\ProjetoDelivery\View\obj\Debug\net8.0-windows\View.sourcelink.json
+G:\MYFILES\Documents\ProjetoDelivery\App\Debug\Debug\net8.0-windows\View.exe
+G:\MYFILES\Documents\ProjetoDelivery\App\Debug\Debug\net8.0-windows\View.deps.json
+G:\MYFILES\Documents\ProjetoDelivery\App\Debug\Debug\net8.0-windows\View.runtimeconfig.json
+G:\MYFILES\Documents\ProjetoDelivery\App\Debug\Debug\net8.0-windows\View.dll
+G:\MYFILES\Documents\ProjetoDelivery\App\Debug\Debug\net8.0-windows\View.pdb

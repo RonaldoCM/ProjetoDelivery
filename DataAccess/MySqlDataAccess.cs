@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using MySqlX.XDevAPI.Common;
 using System.Data;
 
 namespace DataAccess
@@ -16,6 +17,7 @@ namespace DataAccess
         // Method to execute non-query SQL (Insert, Update, Delete)
         public bool ExecuteNonQuery(string query, Dictionary<string, object> parameters = null)
         {
+            bool result = false;
             try
             {
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
@@ -30,10 +32,10 @@ namespace DataAccess
                                 cmd.Parameters.AddWithValue(param.Key, param.Value);
                             }
                         }
-                        cmd.ExecuteNonQuery();
+                        result = cmd.ExecuteNonQuery() > 0;
                     }
                 }
-                return true;
+                return result;
             }
             catch (Exception ex)
             {
@@ -74,7 +76,37 @@ namespace DataAccess
             return dataTable;
         }
 
+        public int ExecuteScalar(string query, Dictionary<string, object> parameters = null)
+        {
+            try
+            {
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
+                    using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                    {
+                        if (parameters != null)
+                        {
+                            foreach (var param in parameters)
+                            {
+                                cmd.Parameters.AddWithValue(param.Key, param.Value);
+                            }
+                        }
 
+                        var result = Convert.ToInt32(cmd.ExecuteScalar());
+
+                        return (result != null && int.TryParse(result.ToString(), out int value)) ? value : 0;
+
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+                return 0;
+            }
+        }
     }
 }
 

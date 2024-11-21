@@ -22,15 +22,18 @@ namespace DataAccess
 
 
         // Example method to insert data into a table
-        public bool InsertPerson(Pessoa p)
+        public int InsertPerson(Pessoa p)
         {
-            string query = "INSERT INTO PESSOA (NOME, SENHA) VALUES (@nome, @senha)";
+            string query = "INSERT INTO PESSOA (NOME, SENHA) VALUES (@nome, @senha); SELECT LAST_INSERT_ID();";
             var parameters = new Dictionary<string, object>
             {
                 { "@nome", p.Nome },
                 { "@senha", p.Senha }
             };
-            return mySqlDataAccess.ExecuteNonQuery(query, parameters);
+
+            var id = mySqlDataAccess.ExecuteScalar(query, parameters);
+
+            return id;
         }
 
         // Example method to retrieve all data from the 'PESSOA' table

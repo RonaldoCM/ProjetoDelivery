@@ -12,3 +12,4 @@ G:\MYFILES\Documents\ProjetoDelivery\Model\obj\Debug\net8.0-windows\Model.dll
 G:\MYFILES\Documents\ProjetoDelivery\Model\obj\Debug\net8.0-windows\refint\Model.dll
 G:\MYFILES\Documents\ProjetoDelivery\Model\obj\Debug\net8.0-windows\Model.pdb
 G:\MYFILES\Documents\ProjetoDelivery\Model\obj\Debug\net8.0-windows\ref\Model.dll
+G:\MYFILES\Documents\ProjetoDelivery\Model\obj\Debug\net8.0-windows\Model.sourcelink.json

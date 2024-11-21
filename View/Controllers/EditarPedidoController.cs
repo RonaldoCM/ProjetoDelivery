@@ -1,5 +1,6 @@
 ﻿using BusinessObjects;
 using Model;
+using System;
 using System.Data;
 using View.Formularios;
 
@@ -36,7 +37,7 @@ namespace View.Controllers
         private void DgItensEdicaoPedido_CellClick(object? sender, DataGridViewCellEventArgs e)
         {
 
-            if (e.ColumnIndex >= 0 && e.RowIndex >= 0) 
+            if (e.ColumnIndex >= 0 && e.RowIndex >= 0)
             {
                 if (e.ColumnIndex == 1)
                 {
@@ -52,17 +53,11 @@ namespace View.Controllers
             {
                 _editarPedidoView.Text = "Inserção de Pedido";
 
-                _editarPedidoView.cmbMunicipio.DataSource = _cidadeBO.GetAllCidades();
-                _editarPedidoView.cmbMunicipio.DisplayMember = "Nome";
-                _editarPedidoView.cmbMunicipio.ValueMember = "Id";
+                CarregarComboMunicipio();
 
-                _editarPedidoView.cmbTipoLogradouro.DataSource = _logradouroBO.ListarTipoLogradouro();
-                _editarPedidoView.cmbTipoLogradouro.DisplayMember = "Descricao";
-                _editarPedidoView.cmbTipoLogradouro.ValueMember = "Id";
+                CarregaComboLogradouro();
 
-                _editarPedidoView.cmbProduto.DataSource = _produtoBO.GetAllProdutos();
-                _editarPedidoView.cmbProduto.DisplayMember = "Nome";
-                _editarPedidoView.cmbProduto.ValueMember = "Id";
+                CarregaComboProdutos();
 
                 _editarPedidoView.tlsValorTotalPedido.Text = "0,00";
             }
@@ -72,6 +67,26 @@ namespace View.Controllers
             }
         }
 
+        private void CarregaComboProdutos()
+        {
+            _editarPedidoView.cmbProduto.DataSource = _produtoBO.GetAllProdutos();
+            _editarPedidoView.cmbProduto.DisplayMember = "Nome";
+            _editarPedidoView.cmbProduto.ValueMember = "Id";
+        }
+
+        private void CarregaComboLogradouro()
+        {
+            _editarPedidoView.cmbTipoLogradouro.DataSource = _logradouroBO.ListarTipoLogradouro();
+            _editarPedidoView.cmbTipoLogradouro.DisplayMember = "Descricao";
+            _editarPedidoView.cmbTipoLogradouro.ValueMember = "Id";
+        }
+
+        private void CarregarComboMunicipio()
+        {
+            _editarPedidoView.cmbMunicipio.DataSource = _cidadeBO.GetAllCidades();
+            _editarPedidoView.cmbMunicipio.DisplayMember = "Nome";
+            _editarPedidoView.cmbMunicipio.ValueMember = "Id";
+        }
 
         private void BtnAdicionarItem_Click(object? sender, EventArgs e)
         {
@@ -148,99 +163,74 @@ namespace View.Controllers
             {
                 IsValidated();
 
-                //Salva pessoa - aguarda retorno
                 string nome = _editarPedidoView.txtNomeCliente.Text;
                 string senha = string.Empty;
 
-                // Cria o Model com os dados da View
                 Pessoa pessoa = new Pessoa(nome, senha);
 
-                // Chama o método de negócio para adicionar a pessoa
-                bool resultado = _pessoaBO.AdicionarPessoa(pessoa);
+                var idCliente = _pessoaBO.AdicionarPessoa(pessoa);
 
-                int cidadeLogradouro = _editarPedidoView.cmbMunicipio.SelectedIndex;
-                int tipoLogradouro = _editarPedidoView.cmbTipoLogradouro.SelectedIndex;
+                if (idCliente.Equals(0))
+                    throw new Exception("Falha ao inserir o cliente");
+
+                var cidadeLogradouro = Convert.ToInt32(_editarPedidoView.cmbMunicipio.SelectedValue);
+                var tipoLogradouro = Convert.ToInt32(_editarPedidoView.cmbTipoLogradouro.SelectedValue);
                 string descricaoLogradouro = _editarPedidoView.txtEnderecoCliente.Text;
                 string numeroCasaLogradouro = _editarPedidoView.txtNumeroCasaCliente.Text;
                 string bairroLogradouro = _editarPedidoView.txtBairroCliente.Text;
 
-                //carregar o objeto TipoLogradouro para enviar
                 Logradouro logradouro = new Logradouro(descricaoLogradouro, numeroCasaLogradouro, tipoLogradouro, cidadeLogradouro);
+                var logradouroInserido = _logradouroBO.AdicionarLogradouro(logradouro);
 
-                //Salva endereço - aguarda retorno
-                _logradouroBO.AdicionarLogradouro(logradouro);
+                if (logradouroInserido == false)
+                    throw new Exception("Falha ao inserir endereço do cliente");
 
                 FreteView frete = new FreteView();
-
                 FreteController freteController = new FreteController(frete);
-
                 frete.ShowDialog();
                 var vFrete = frete.txbValorFrete.Text;
 
-                string codigoPedido = "CEC1966";
+                string codigoPedido = string.Concat(idCliente.ToString(), pessoa.Nome);
                 decimal valorFrete = decimal.Parse(vFrete);
                 decimal valorTotalPedido = CalcularValorTotalDoPedido(valorFrete);
-                int idSituacao = 1; //Criado
-                int idCliente = 1; //Inserir o ID criado no insert de pessoa acima.
+                int idSituacao = 1;
 
 
                 List<ItensPedido> itensPedido = new List<ItensPedido>();
 
-                //DEVE IR PARA DENTRO DO FOREACH
-                // Captura os dados das células da linha atual
-                int idProduto = 1;   //Convert.ToInt32(row.Cells["IdProduto"].Value);
-                int quantidade = 1;   //Convert.ToInt32(row.Cells["Quantidade"].Value);
-                decimal precoUnitario = 25.5M; //Convert.ToDecimal(row.Cells["PrecoUnitario"].Value);
-
-                // Cria um novo item do pedido
-                ItensPedido item = new ItensPedido
-                {
-                    IdProduto = idProduto,
-                    Quantidade = quantidade,
-                    PrecoUnitario = precoUnitario
-
-                };
-
-                itensPedido.Add(item);
-
-                //loop para pegar os dados do datagrid e inserir na lista de itens do pedido.
                 foreach (DataGridViewRow row in _editarPedidoView.dgItensEdicaoPedido.Rows)
                 {
-                    //// Captura os dados das células da linha atual
-                    //int idProduto = 1;   //Convert.ToInt32(row.Cells["IdProduto"].Value);
-                    //int quantidade = 1;   //Convert.ToInt32(row.Cells["Quantidade"].Value);
-                    //decimal precoUnitario = 25.5M; //Convert.ToDecimal(row.Cells["PrecoUnitario"].Value);
+                    int idProduto = Convert.ToInt32(row.Cells["COLIDPRODUTO"].Value);
+                    int quantidade = Convert.ToInt32(row.Cells["COLQUANTIDADEITEMPEDIDO"].Value);
+                    decimal precoUnitario = Convert.ToDecimal(row.Cells["COLPRECOPRODUTO"].Value);
 
-                    //// Cria um novo item do pedido
-                    //ItensPedido item = new ItensPedido
-                    //{
-                    //    IdProduto = idProduto,
-                    //    Quantidade = quantidade,
-                    //    PrecoUnitario = precoUnitario
+                    ItensPedido item = new ItensPedido
+                    {
+                        IdProduto = idProduto,
+                        Quantidade = quantidade,
+                        PrecoUnitario = precoUnitario
+                    };
 
-                    //};
-
-                    //itensPedido.Add(item);
-
+                    itensPedido.Add(item);
                 }
 
-
-                //Salva pedido + Itens
                 Pedido pedido = new Pedido(codigoPedido, DateTime.Now, valorFrete, valorTotalPedido, idSituacao, idCliente, itensPedido);
 
-                var inserido = _pedidoBO.AdicionarPedido(pedido);
+                var pedidoInserido = _pedidoBO.AdicionarPedido(pedido);
 
+                if (pedidoInserido)
+                    MessageBox.Show("Pedido Inserido com sucesso", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                LimparTelaPedido();
 
-
-
-
-                //Limpa tela
-                //Atualiza tela de trás.
             }
             catch (Exception exeption)
             {
                 MessageBox.Show(exeption.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            finally
+            {
+                //Atualiza tela de trás.
             }
 
         }
@@ -304,5 +294,20 @@ namespace View.Controllers
 
         }
 
+        private void LimparTelaPedido()
+        {
+            _editarPedidoView.txtNomeCliente.Text = string.Empty;
+            _editarPedidoView.txtBairroCliente.Text = string.Empty;
+            _editarPedidoView.txtEnderecoCliente.Text = string.Empty;
+            _editarPedidoView.txtNumeroCasaCliente.Text = string.Empty;
+            _editarPedidoView.tlsValorTotalPedido.Text = _editarPedidoView.tlsValorTotalPedido.Text = "0,00";
+            _editarPedidoView.numUpDwnQuantidadeItem.Value = 0;
+            _editarPedidoView.dgItensEdicaoPedido.Rows.Clear();
+
+            CarregaComboProdutos();
+            CarregarComboMunicipio();
+            CarregaComboLogradouro();
+
+        }
     }
 }

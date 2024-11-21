@@ -28,19 +28,16 @@ namespace View.Controllers
             Pessoa pessoa = new Pessoa(nome, senha);
 
             // Chama o método de negócio para adicionar a pessoa
-            bool resultado = _pessoaBO.AdicionarPessoa(pessoa);
+            var idPessoa = _pessoaBO.AdicionarPessoa(pessoa);
 
-            if (resultado == true)
+            if (idPessoa > 0)
             {
-                MessageBox.Show(@"\Pessoa adicionada com sucesso.\");
-                
-                // Atualiza a lista na View
+                MessageBox.Show(@"\Pessoa adicionada com sucesso.\");                                
                 AtualizarLista();
             }
             else
             {
-                // Exibe mensagem de erro
-                MessageBox.Show("Não inserido");
+                MessageBox.Show("Pessoa não inserida");
             }
 
         }

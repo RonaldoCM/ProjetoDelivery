@@ -26,7 +26,8 @@ namespace DataAccess
                 { "@cidade_id", logradouro.IdCidade }
             };
 
-            return mySqlDataAccess.ExecuteNonQuery(query, parameters);
+            var result = mySqlDataAccess.ExecuteNonQuery(query, parameters);
+            return result;
         }
 
         public DataTable GetAllLogradouro()

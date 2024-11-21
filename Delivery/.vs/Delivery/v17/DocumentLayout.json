@@ -1,12 +1,88 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "G:\\MYFILES\\Documents\\ProjetoDelivery\\Delivery\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C79587A8-4493-4303-8517-E9717073E64A}|..\\View\\View.csproj|g:\\myfiles\\documents\\projetodelivery\\view\\controllers\\editarpedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{127E5D53-3D05-4F35-ABB2-BBCE96483370}|..\\DataAccess\\DataAccess.csproj|g:\\myfiles\\documents\\projetodelivery\\dataaccess\\logradouroda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{127E5D53-3D05-4F35-ABB2-BBCE96483370}|..\\DataAccess\\DataAccess.csproj|g:\\myfiles\\documents\\projetodelivery\\dataaccess\\mysqldataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:17:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:15:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:16:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:14:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:18:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MySqlDataAccess.cs",
+              "DocumentMoniker": "G:\\MYFILES\\Documents\\ProjetoDelivery\\DataAccess\\MySqlDataAccess.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\MySqlDataAccess.cs",
+              "ToolTip": "G:\\MYFILES\\Documents\\ProjetoDelivery\\DataAccess\\MySqlDataAccess.cs",
+              "RelativeToolTip": "..\\DataAccess\\MySqlDataAccess.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAhwCUAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T00:20:34.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LogradouroDA.cs",
+              "DocumentMoniker": "G:\\MYFILES\\Documents\\ProjetoDelivery\\DataAccess\\LogradouroDA.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\LogradouroDA.cs",
+              "ToolTip": "G:\\MYFILES\\Documents\\ProjetoDelivery\\DataAccess\\LogradouroDA.cs",
+              "RelativeToolTip": "..\\DataAccess\\LogradouroDA.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T00:20:06.471Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EditarPedidoController.cs",
+              "DocumentMoniker": "G:\\MYFILES\\Documents\\ProjetoDelivery\\View\\Controllers\\EditarPedidoController.cs",
+              "RelativeDocumentMoniker": "..\\View\\Controllers\\EditarPedidoController.cs",
+              "ToolTip": "G:\\MYFILES\\Documents\\ProjetoDelivery\\View\\Controllers\\EditarPedidoController.cs",
+              "RelativeToolTip": "..\\View\\Controllers\\EditarPedidoController.cs",
+              "ViewState": "AgIAALsAAAAAAAAAAAAIwMUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T00:17:28.53Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

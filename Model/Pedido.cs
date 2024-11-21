@@ -21,7 +21,6 @@
             IdSituacao = idSituacao;
             IdPessoa = idPessoa;
             ItensPedido = itensPedido;
-            
         } 
     }
 }
